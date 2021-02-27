@@ -7,6 +7,7 @@ import LoaderPokemon from '../components/LoaderPokemon';
 import ImageDescriptionPokemon from '../components/pokemon-page/ImageDescriptionPokemon';
 import StatsPokemon from '../components/pokemon-page/StatsPokemon';
 import ChainPokemon from '../components/pokemon-page/ChainPokemon';
+import ActionsPokemon from '../components/pokemon-page/ActionsPokemon';
 
 export default function Pokemon() {
   const pokemon = useRoute().params.item;
@@ -32,7 +33,7 @@ export default function Pokemon() {
     if (seleccionado !== null) {
       setTimeout(() => {
         setVisible(false);
-      }, 500);
+      }, 1000);
     }
   }, [seleccionado]);
 
@@ -43,6 +44,7 @@ export default function Pokemon() {
         <ImageDescriptionPokemon />
         <StatsPokemon />
         <ChainPokemon />
+        <ActionsPokemon />
       </ScrollView>
     </>
   );

@@ -1,13 +1,20 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableWithoutFeedback} from 'react-native';
+import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Subheading} from 'react-native-paper';
+import {OBTENER_POKEMON} from '../redux/types';
+import {useDispatch} from 'react-redux';
 
 export default function ItemListPokemon(props) {
+  const dispatch = useDispatch();
   const {item} = props;
   const navigation = useNavigation();
 
   const navigatePokemonPage = () => {
+    dispatch({
+      type: OBTENER_POKEMON,
+      payload: false,
+    });
     navigation.navigate('pokemon-stack', {item});
   };
 

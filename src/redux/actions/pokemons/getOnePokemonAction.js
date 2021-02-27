@@ -7,7 +7,6 @@ import axios from 'axios';
 
 export const getOnePokemonAction = (url) => {
   return async (dispatch) => {
-    dispatch(getOnePokemon(true));
     try {
       const pokemonData = await axios.get(url);
       const species = await axios.get(pokemonData.data.species.url);
@@ -26,11 +25,6 @@ export const getOnePokemonAction = (url) => {
     }
   };
 };
-
-const getOnePokemon = (estado) => ({
-  type: OBTENER_POKEMON,
-  payload: estado,
-});
 
 const getOnePokemonSuccess = (data) => ({
   type: OBTENER_POKEMON_EXITO,
