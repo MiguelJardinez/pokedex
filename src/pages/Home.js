@@ -1,18 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {View, FlatList, StyleSheet} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import {TextInput, Divider} from 'react-native-paper';
 import {getPokemonsActions} from '../redux/actions/pokemons/getPokemonsActions';
 import {nextPagePokemonAction} from '../redux/actions/pokemons/nextPagePokemonAction';
 import {previousPagePokemonAction} from '../redux/actions/pokemons/previousPagePokemonAction';
 import {useDispatch, useSelector} from 'react-redux';
 import ItemListPokemon from '../components/ItemListPokemon';
+import {useNavigation} from '@react-navigation/native';
+import ButtonHeader from '../components/ButtonHeader';
 
 export default function Home() {
+  const navigation = useNavigation();
   const dispatch = useDispatch();
   const {pokemons} = useSelector((pokemones) => pokemones.pokemons);
   const [searchPokemons, setSearchPokemons] = useState(pokemons);
 
   useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => <ButtonHeader />,
+    });
     dispatch(getPokemonsActions());
   }, []);
 
@@ -33,11 +39,13 @@ export default function Home() {
         style={styles.search}
         onChangeText={(text) => handleSearchPokemon(text)}
         placeholder="Busca un pokemon..."
+        left={<TextInput.Icon name="magnify" />}
       />
       <FlatList
         data={searchPokemons}
         renderItem={(pokemon) => <ItemListPokemon {...pokemon} />}
         keyExtractor={(item) => item.name}
+        ItemSeparatorComponent={() => <Divider />}
       />
     </View>
   );
@@ -45,7 +53,6 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   search: {
-    marginTop: 8,
     marginBottom: 16,
   },
 });

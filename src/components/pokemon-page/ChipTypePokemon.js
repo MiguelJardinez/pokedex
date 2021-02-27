@@ -9,7 +9,9 @@ export default function ChipTypePokemon() {
   return (
     <View style={styles.viewType}>
       {seleccionado?.types.map((type) => (
-        <Chip style={styles.chip} key={type?.type.name}>
+        <Chip
+          style={[styles.chip, {backgroundColor: seleccionado?.color.name}]}
+          key={type?.type.name}>
           <Text style={styles.chipText}>{type?.type.name}</Text>
         </Chip>
       ))}
@@ -25,7 +27,6 @@ const styles = StyleSheet.create({
   },
   chip: {
     marginHorizontal: 14,
-    backgroundColor: colors.red_pokemon,
     color: colors.white,
   },
   chipText: {

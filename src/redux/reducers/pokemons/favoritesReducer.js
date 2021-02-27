@@ -1,11 +1,40 @@
-import {ATRAPAR_POKEMON, LIBERAR_POKEMON} from '../../types';
+import {
+  ATRAPAR_POKEMON,
+  LIBERAR_POKEMON,
+  FAVORITOS_STORAGE,
+  FAVORITOS_STORAGE_EXITO,
+  FAVORITOS_STORAGE_ERROR,
+} from '../../types';
 
 const initialState = {
   atrapados: [],
+  cargando: false,
+  error: false,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case FAVORITOS_STORAGE:
+      return {
+        ...state,
+        cargando: action.payload,
+        error: false,
+      };
+
+    case FAVORITOS_STORAGE_EXITO:
+      return {
+        ...state,
+        cargando: false,
+        atrapados: action.payload,
+      };
+
+    case FAVORITOS_STORAGE_ERROR:
+      return {
+        ...state,
+        cargando: false,
+        error: action.payload,
+      };
+
     case ATRAPAR_POKEMON:
       return {
         ...state,

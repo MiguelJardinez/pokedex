@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 import {Title, Paragraph, Headline} from 'react-native-paper';
-import {colors} from '../../styles/Colors';
 import {useSelector} from 'react-redux';
 import ChipTypePokemon from './ChipTypePokemon';
 
@@ -29,7 +28,10 @@ export default function ImageDescriptionPokemon() {
           <ChipTypePokemon />
           <View style={styles.viewDetails}>
             <Title>Name:</Title>
-            <Headline style={styles.title}>{seleccionado?.name}</Headline>
+            <Headline
+              style={[styles.title, {color: seleccionado?.color?.name}]}>
+              {seleccionado?.name}
+            </Headline>
           </View>
           <View style={styles.viewDetails}>
             <Title>Description:</Title>
@@ -53,7 +55,6 @@ const styles = StyleSheet.create({
     height: 180,
   },
   title: {
-    color: colors.red_pokemon,
     fontSize: 32,
     fontWeight: 'bold',
     textTransform: 'capitalize',

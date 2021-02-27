@@ -8,6 +8,7 @@ import ImageDescriptionPokemon from '../components/pokemon-page/ImageDescription
 import StatsPokemon from '../components/pokemon-page/StatsPokemon';
 import ChainPokemon from '../components/pokemon-page/ChainPokemon';
 import ActionsPokemon from '../components/pokemon-page/ActionsPokemon';
+import MovesPokemon from '../components/pokemon-page/MovesPokemon';
 
 export default function Pokemon() {
   const pokemon = useRoute().params.item;
@@ -44,6 +45,7 @@ export default function Pokemon() {
         <ImageDescriptionPokemon />
         <StatsPokemon />
         <ChainPokemon />
+        <MovesPokemon />
         <ActionsPokemon />
       </ScrollView>
     </>

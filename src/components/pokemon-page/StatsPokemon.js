@@ -5,6 +5,9 @@ import {useSelector} from 'react-redux';
 
 export default function StatsPokemon() {
   const {seleccionado} = useSelector((state) => state.pokemons);
+  if (seleccionado === null) {
+    return null;
+  }
   return (
     <>
       <View style={styles.viewDetails}>

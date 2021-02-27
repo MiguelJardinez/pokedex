@@ -37,6 +37,7 @@ export default function ChainPokemon() {
           } = modeEvolution(evolution);
           return (
             <TypeEvolutionsPokemons
+              key={evolution.species.name}
               evolution={evolution}
               nivel={nivel}
               haveNextEvolution={haveNextEvolution}
