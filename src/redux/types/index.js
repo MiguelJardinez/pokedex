@@ -1,0 +1,20 @@
+//Acciones para obtener pokemons
+export const OBTENER_POKEMONES = 'OBTENER_POKEMONES';
+export const OBTENER_POKEMONES_EXITO = 'OBTENER_POKEMONES_EXITO';
+export const OBTENER_POKEMONES_ERROR = 'OBTENER_POKEMONES_ERROR';
+
+//Acciones para obtener un pokemon
+export const OBTENER_POKEMON = 'OBTENER_POKEMON';
+export const OBTENER_POKEMON_EXITO = 'OBTENER_POKEMON_EXITO';
+export const OBTENER_POKEMON_ERROR = 'OBTENER_POKEMON_ERROR';
+
+
+//Siguiente pagina de pokemones
+export const SIGUINTE_PAGINA = 'SIGUINTE_PAGINA';
+export const SIGUINTE_PAGINA_EXITO = 'SIGUINTE_PAGINA_EXITO';
+export const SIGUINTE_PAGINA_ERROR = 'SIGUINTE_PAGINA_ERROR';
+
+//Siguiente pagina de pokemones
+export const ANTERIOR_PAGINA = 'ANTERIOR_PAGINA';
+export const ANTERIOR_PAGINA_EXITO = 'ANTERIOR_PAGINA_EXITO';
+export const ANTERIOR_PAGINA_ERROR = 'ANTERIOR_PAGINA_ERROR';
