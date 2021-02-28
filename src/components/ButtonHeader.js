@@ -18,7 +18,6 @@ export default function ButtonHeader() {
 
 const styles = StyleSheet.create({
   btnHeader: {
-    color: colors.white,
     fontWeight: 'bold',
     marginRight: 16,
     fontSize: 18,

@@ -10,8 +10,12 @@ export const getfavoritesAction = () => {
     dispatch(getFavorite(true));
     try {
       const favoritesData = await AsyncStorage.getItem('favorites');
-      const pokemonStorage = JSON.parse(favoritesData);
-      dispatch(getfavoriteSuccess(pokemonStorage));
+      if (favoritesData !== null) {
+        const pokemonStorage = JSON.parse(favoritesData);
+        dispatch(getfavoriteSuccess(pokemonStorage));
+      } else {
+        dispatch(getfavoriteSuccess([]));
+      }
     } catch (error) {
       console.log(error);
       dispatch(getFavoritesFail(true));

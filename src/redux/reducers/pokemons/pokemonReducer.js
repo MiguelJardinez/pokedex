@@ -5,12 +5,6 @@ import {
   OBTENER_POKEMON,
   OBTENER_POKEMON_EXITO,
   OBTENER_POKEMON_ERROR,
-  SIGUINTE_PAGINA,
-  SIGUINTE_PAGINA_EXITO,
-  SIGUINTE_PAGINA_ERROR,
-  ANTERIOR_PAGINA,
-  ANTERIOR_PAGINA_EXITO,
-  ANTERIOR_PAGINA_ERROR,
 } from '../../types';
 
 const initialState = {
@@ -22,8 +16,6 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ANTERIOR_PAGINA:
-    case SIGUINTE_PAGINA:
     case OBTENER_POKEMON:
     case OBTENER_POKEMONES:
       return {
@@ -32,8 +24,6 @@ export default (state = initialState, action) => {
         seleccionado: null,
       };
 
-    case ANTERIOR_PAGINA_EXITO:
-    case SIGUINTE_PAGINA_EXITO:
     case OBTENER_POKEMONES_EXITO:
       return {
         ...state,
@@ -41,8 +31,6 @@ export default (state = initialState, action) => {
         pokemons: action.payload,
       };
 
-    case ANTERIOR_PAGINA_ERROR:
-    case SIGUINTE_PAGINA_ERROR:
     case OBTENER_POKEMON_ERROR:
     case OBTENER_POKEMONES_ERROR:
       return {
@@ -61,4 +49,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};

@@ -31,6 +31,7 @@ export default function Pokemon() {
   }, [pokemon]);
 
   useEffect(() => {
+    setVisible(true);
     if (seleccionado !== null) {
       setTimeout(() => {
         setVisible(false);

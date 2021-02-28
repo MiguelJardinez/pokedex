@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {TextInput, Divider} from 'react-native-paper';
 import {getPokemonsActions} from '../redux/actions/pokemons/getPokemonsActions';
-import {nextPagePokemonAction} from '../redux/actions/pokemons/nextPagePokemonAction';
-import {previousPagePokemonAction} from '../redux/actions/pokemons/previousPagePokemonAction';
 import {useDispatch, useSelector} from 'react-redux';
 import ItemListPokemon from '../components/ItemListPokemon';
 import {useNavigation} from '@react-navigation/native';
@@ -36,7 +34,6 @@ export default function Home() {
   return (
     <View>
       <TextInput
-        style={styles.search}
         onChangeText={(text) => handleSearchPokemon(text)}
         placeholder="Busca un pokemon..."
         left={<TextInput.Icon name="magnify" />}
@@ -50,9 +47,3 @@ export default function Home() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  search: {
-    marginBottom: 16,
-  },
-});

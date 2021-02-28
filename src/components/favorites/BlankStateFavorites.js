@@ -25,7 +25,7 @@ export default function BlankStateFavorites() {
       </View>
       <View style={styles.viewActions}>
         <Button
-          style={styles.btnAction}
+          // style={styles.btnAction}
           onPress={() => navigation.navigate('home-stack')}
           mode="contained">
           Atrapa tu primer pokemon
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   viewContainer: {
     paddingHorizontal: 16,
     paddingVertical: 24,
-    height: HEIGHT_SCREEN - 90,
+    height: HEIGHT_SCREEN - 80,
     backgroundColor: colors.white,
   },
   viewImage: {
@@ -64,9 +64,6 @@ const styles = StyleSheet.create({
   viewActions: {
     flex: 0.2,
     justifyContent: 'flex-end',
-  },
-  btnAction: {
-    backgroundColor: colors.red_pokemon,
   },
   img: {
     width: '100%',

@@ -11,10 +11,6 @@ export default function ItemListPokemon(props) {
   const navigation = useNavigation();
 
   const navigatePokemonPage = () => {
-    dispatch({
-      type: OBTENER_POKEMON,
-      payload: false,
-    });
     navigation.navigate('pokemon-stack', {item});
   };
 

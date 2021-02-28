@@ -26,7 +26,6 @@ export default function ErrorPage() {
         <View style={styles.viewActions}>
           <Button
             onPress={() => navigation.navigate('home-stack')}
-            style={{backgroundColor: colors.red_pokemon}}
             mode="contained">
             Regresa a home
           </Button>

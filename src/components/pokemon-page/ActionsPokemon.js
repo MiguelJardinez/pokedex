@@ -111,7 +111,6 @@ export default function ActionsPokemon() {
 
 const styles = StyleSheet.create({
   btnAction: {
-    backgroundColor: colors.red_pokemon,
     marginVertical: 16,
   },
   btnCongrats: {
@@ -124,7 +123,6 @@ const styles = StyleSheet.create({
     color: colors.red_pokemon,
   },
   btnFree: {
-    backgroundColor: colors.red_pokemon,
     marginBottom: 16,
   },
   titleFree: {
