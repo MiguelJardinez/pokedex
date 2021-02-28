@@ -58,7 +58,6 @@ export default function ActionsPokemon() {
   };
 
   useEffect(() => {
-    console.log(atrapados);
     if (atrapados.length > 0) {
       atrapados.find((pokemon) => {
         if (pokemon?.name === seleccionado?.name) {

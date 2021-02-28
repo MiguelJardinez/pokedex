@@ -25,7 +25,6 @@ export default function Pokemon() {
     });
     dispatch(getOnePokemonAction(pokemon.url));
     if (error && seleccionado?.name) {
-      console.log(seleccionado?.name);
       navigation.navigate('error-stack');
     }
   }, [pokemon]);
