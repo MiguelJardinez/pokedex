@@ -11,7 +11,7 @@ export default function ButtonHeader() {
       mode="outlined"
       style={styles.btnHeader}
       onPress={() => navigation.navigate('favorite-stack')}>
-      <Text style={styles.textBtn}>Capurados</Text>
+      <Text style={styles.textBtn}>Caught up</Text>
     </Button>
   );
 }

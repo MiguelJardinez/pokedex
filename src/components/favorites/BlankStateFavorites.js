@@ -17,10 +17,12 @@ export default function BlankStateFavorites() {
         />
       </View>
       <View style={styles.viewDetails}>
-        <Title style={styles.titleDetails}>No tienes pokemones</Title>
+        <Title style={styles.titleDetails}>
+          You don't have any pokemon yet
+        </Title>
         <Paragraph style={styles.paragraphDetails}>
-          No has caputado a ningún pokemon aún, regresa a la lista de pokemones
-          y atrapa al tu primer compañero
+          You don't have any pokemon yet, go to pokemon list and caught them
+          your first pokemon for your adventure
         </Paragraph>
       </View>
       <View style={styles.viewActions}>
@@ -28,7 +30,7 @@ export default function BlankStateFavorites() {
           // style={styles.btnAction}
           onPress={() => navigation.navigate('home-stack')}
           mode="contained">
-          Atrapa tu primer pokemon
+          Go to pokemon list
         </Button>
       </View>
     </View>

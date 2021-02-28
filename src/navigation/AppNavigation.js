@@ -1,6 +1,5 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Paragraph} from 'react-native-paper';
 import Home from '../pages/Home';
 import Pokemon from '../pages/Pokemon';
 import ErrorPage from '../pages/ErrorPage';
@@ -15,7 +14,7 @@ export default function AppNavigation() {
         name="home-stack"
         component={Home}
         options={{
-          title: 'Pokemones Kanto',
+          title: 'Kanto pokemon list',
           headerTintColor: colors.white,
           headerStyle: {
             backgroundColor: colors.red_pokemon,
@@ -37,7 +36,7 @@ export default function AppNavigation() {
         name="favorite-stack"
         component={PokeFavorites}
         options={{
-          title: 'Capturados',
+          title: 'Caught up',
           headerTintColor: colors.white,
           headerStyle: {
             backgroundColor: colors.red_pokemon,
@@ -48,7 +47,7 @@ export default function AppNavigation() {
         name="error-stack"
         component={ErrorPage}
         options={{
-          title: 'Hubo un error',
+          title: 'We have troubles',
           headerTintColor: colors.white,
           headerStyle: {
             backgroundColor: colors.red_pokemon,

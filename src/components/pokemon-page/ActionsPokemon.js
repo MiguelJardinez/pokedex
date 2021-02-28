@@ -91,7 +91,7 @@ export default function ActionsPokemon() {
             style={styles.btnCongrats}
             mode="outlined">
             <Title style={styles.title}>
-              ¡{`${seleccionado?.name} ya esta en tu equipo`}!
+              {`¡${seleccionado?.name} is in your team already!`}
             </Title>
           </Button>
           <Button
@@ -99,7 +99,7 @@ export default function ActionsPokemon() {
             style={styles.btnFree}
             mode="contained">
             <Title style={styles.titleFree}>
-              {`¿Quieres liberar a ${seleccionado?.name} ?`}
+              {`Do you want to free ${seleccionado?.name}?`}
             </Title>
           </Button>
         </>
